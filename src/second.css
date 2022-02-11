@@ -1,0 +1,371 @@
+*{
+   
+    background:black;
+    font-family: 'Rubik', sans-serif;
+}
+p{
+    margin:0;
+    padding:0;
+    background-color:transparent;
+  }
+  
+.time-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    margin: 60px 90px 50px 90px;
+    grid-gap:10px;
+    grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+}
+.time-container > .header{
+    margin:0px 30px 0px 20px;
+    justify-content: center;
+    align-items:center;
+    height:500px;
+    width:272px;
+    grid-row: 1 / span 2;
+}
+.time-container > .header > .card{
+    border-radius:15px;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    background-color:hsl(226, 43%, 10%);
+    
+  }
+  .card-body{
+    background-color:transparent;
+    font-family: sans-serif;
+    margin-left:14px;
+  }
+  .card-body > p:first-child{
+    background-color:transparent;
+    color:hsl(236, 100%, 87%);
+    margin-top:20px;
+    margin-left:13px;
+    font-size:14px;
+  }
+  .card-body > p:last-child{
+    background-color:transparent;
+    color:white;
+    font-size:43px;
+    margin-left:13px;
+    height: 23px;
+    font-weight:300;
+  }
+  .time-container > .header > .card > .card-top {
+    height: 350px;
+    border-radius: 15px;
+    background-color:hsla(224, 65%, 50%, 0.829);
+    width:100%;
+  }
+  .card-top > img{
+    width:75px;
+    height:75px;
+    margin-left:23px;
+    margin-top:30px;
+    border:3px solid white;
+    border-radius:50%;
+  }
+  .days{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    justify-content: center;
+    align-content: center;
+    padding-top:20px;
+    padding-left:30px;
+    background-color:transparent;
+  }
+  .days > p > a{
+    background-color:transparent;
+    color:white;
+    font-size:18px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color:hsl(240, 10%, 51%);
+    cursor: pointer;
+  }
+  .days > p > a:hover{
+    color:white;
+  }
+  .card-context{
+    align-self: flex-start;
+    width:255px;
+    height:240px;
+    border-radius:15px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    margin-left:27px;
+  }
+  
+  .card-context.Work{
+    background:hsl(15, 100%, 70%);
+  }
+  .card-context.Play{
+    background:hsl(195, 74%, 62%);
+  }
+  .card-context.Study{
+    background:hsl(348, 100%, 68%);
+  }
+  .second-row.Exercise{
+    background:hsl(145, 58%, 55%);
+  }
+  .second-row.Social{
+    background:hsl(264, 64%, 52%);
+  }
+  .second-row.Self{
+    background:hsl(43, 84%, 65%);
+  }
+  .card-context > .context{
+    height: 200px;
+    background:hsl(226, 43%, 10%);
+    border-radius:15px;
+    position: absolute;
+    width:100%;
+  }
+  .card-context > .context:hover{
+    background:hsl(235, 42%, 49%)
+  }
+  .card-context > .badge{
+    margin-left:auto;
+    padding-right:20px;
+    background-color:transparent;
+    width:79px;
+    height:79px;
+    padding-bottom:170px;
+    overflow-y:hidden;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .second-row{
+    align-self: flex-start;
+    background:hsl(19, 80%, 50%);
+    width:255px;
+    height:240px;
+    margin-top: 10px;
+    border-radius:15px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    margin-left:27px;
+  }
+  
+  .second-row > .context{
+    height: 200px;
+    background:hsl(226, 43%, 10%);
+    border-radius:15px;
+    position: absolute;
+    width:100%;
+  }
+  .second-row > .context:hover{
+    background:hsl(235, 42%, 49%)
+  }
+  .second-row > .badge{
+    margin-left:auto;
+    padding-right:20px;
+    background-color:transparent;
+    width:79px;
+    height:79px;
+    padding-bottom:170px;
+    overflow-y:hidden;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .context-header{
+    display: flex;
+    flex-direction:row;
+    background: transparent;
+    width:100%;
+    margin:25px;
+    font-size:14px;
+    font-weight: 400;
+    gap:118px;
+  }
+  .context-header > .activity{
+    color:white;
+    background: transparent;
+    width:65px;
+  }
+  .context-header > .fav-icon{
+    color:white;
+    background: transparent;
+  }
+  .context-time{
+    display:flex;
+    flex-direction: column;
+    background: transparent;
+    color:white;
+    margin:25px;
+  }
+  .context-time > .current{
+    font-size:51px;
+    font-weight: 200;
+  }
+  .context-time > .previous{
+    color:hsl(240, 10%, 51%);
+    font-weight: 400;
+  }
+  @media  screen and (max-width: 700px) {
+    .card-context,.second-row{
+      margin-left:29px;
+    }
+  }
+
+  @media  screen and (max-width: 375px) {
+    .time-container{
+        width:95%;
+        display:flex;
+        margin: 0 20px 50px 10px;
+    }
+    .time-container > .header {
+      margin:60px 0px 20px 0px;
+      display:flex;
+      height:220px;
+      width:100%;
+    }
+    .time-container > .header > .card{
+      border-radius:15px;
+      width:100%;
+      height:220px;
+      justify-content: center;
+      background-color:hsl(226, 43%, 10%);
+    }
+    .time-container > .header > .card > .card-top {
+      height: 150px;
+      border-radius: 15px;
+      background-color:hsl(235, 45%, 61%);
+      display:flex;
+      justify-content: left;
+      align-items:center;
+      
+    }
+    .card-top > img{
+      width:65px;
+      height:65px;
+      margin-left:23px;
+      background-color:transparent;
+      border:3px solid white;
+      border-radius:50%;
+      margin-bottom:28px; 
+    }
+    
+    .card-top > p{
+      width:65px;
+      height:65px;
+      margin-left:33px;
+      background-color:transparent;
+    }
+    .card-body{
+      background-color:transparent;
+      font-family: sans-serif;
+      margin-left:10px;
+      margin-bottom:20px; 
+    }
+    .card-body > p:first-child{
+      background-color:transparent;
+      color:hsl(236, 100%, 87%);
+      padding-bottom:8px;
+      font-size:18px;
+    }
+    .card-body > p:last-child{
+      background-color:transparent;
+      color:white;
+      font-size:23px;
+      height: 23px;
+    }
+    .days{
+      display:flex;
+      flex-direction:row;
+      gap:45px;
+      justify-content: center;
+      align-content: center;
+      background-color:transparent;
+      padding-left:0px;
+    }
+    .days > p > a{
+      background-color:transparent;
+      color:white;
+      font-size:18px;
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+      color:hsl(240, 10%, 51%);
+    }
+    .days > p > a:hover{
+      color:white;
+    }
+    .card-context{
+      height:150px;
+      width:100%;
+      margin:0px 0px 20px 0px;
+      border-radius:15px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .card-context > .context{
+      height: 105px;
+      background:hsl(226, 43%, 10%);
+      border-radius:15px;
+    }
+    .card-context > .badge{
+      margin-left:auto;
+      padding-right:20px;
+      margin-bottom:0;
+      overflow:hidden;
+      padding-bottom:70px;
+    }
+    .second-row > .badge{
+      margin-left:auto;
+      padding-right:20px;
+      margin-bottom:0;
+      overflow:hidden;
+      padding-bottom:70px;
+    }
+     .second-row{
+        background:hsl(24, 91%, 58%);
+        height:150px;
+        width:100%;
+        margin:0px 0px 20px 0px;
+        border-radius:15px;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .second-row > .context{
+        height: 110px;
+        background:hsl(226, 43%, 10%);
+        border-radius:15px;
+      }
+      .context-header {
+        gap:183px;
+        margin-bottom:5px;
+      }
+      .context-header > .activity{
+        font-size:18px;
+        font-weight: 400;
+        width:76px;
+      }
+     
+        
+      .context-time{
+        margin: 15px 0px 10px 25px;
+        display:flex;
+        flex-direction: row;
+        gap:91px;
+      }
+      .context-time > .current{
+        font-size:26px;
+        width:67px;
+      }
+      .context-time > .previous{
+        color:hsl(240, 10%, 51%);
+        font-weight: 400;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+      }
+  }
+  
