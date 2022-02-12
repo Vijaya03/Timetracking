@@ -2,7 +2,7 @@
   "name": "time-tracking",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Vijaya03.github.io",
+  "homepage": "https://vijaya03.github.io/Timetracking/",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.2",
